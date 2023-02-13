@@ -1,11 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import "./App.css";
 
 function App() {
+  const [locations, setLocations] = useState([]);
+
+  const getLocations = async () => {
+    try {
+      let res = await axios.get("http://localhost:3001/locations");
+      setLocations(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getLocations();
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
