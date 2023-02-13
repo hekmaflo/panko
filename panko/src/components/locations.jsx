@@ -27,6 +27,13 @@ const Form = (props) => {
   return (
     // Event Listener: tells the browser which event to listen for on which element and what to do when the event happens
     <form onSubmit={handleSubmit}>
+      <label htmlFor="LocationName">Location:</label>
+      <input
+        type="text"
+        id="locationName"
+        onChange={handleChange}
+        value={formState.locationName}
+      />
       <label htmlFor="locationType">Type of location:</label>
       <select
         id="locationType"

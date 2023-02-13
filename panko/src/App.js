@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import Form from "./components/locations";
 
 function App() {
   const [locations, setLocations] = useState([]);
@@ -20,17 +21,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Form getLocations={getLocations} />
+        <h1>LOCATIONS:</h1>
+        {locations.map((location) => (
+          <div key={location._id}>
+            <h1>Location: {location.locationName}</h1>
+            <h3>Type of Location: {location.locationType}</h3>
+            <p>Address: {location.address}</p>
+            <p>Description: {location.description}</p>
+          </div>
+        ))}
       </header>
     </div>
   );
