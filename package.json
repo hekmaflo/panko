@@ -1,0 +1,30 @@
+{
+  "name": "panko",
+  "version": "1.0.0",
+  "description": "Panko is a travel planning application built using the MERN stack. The name \"Panko\" is derived from the Japanese word for breadcrumbs, symbolizing the idea of leaving a trail and marking one's journey. With Panko, users can easily plan and organize their upcoming trips by adding the city they will be visiting, the places they want to see, and short descriptions of their planned activities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hekmaflo/panko.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hekmaflo/panko/issues"
+  },
+  "homepage": "https://github.com/hekmaflo/panko#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
