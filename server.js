@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001;
 
 const db = require("./db");
 
-const { Location } = require("./models");
+const { Location, City } = require("./models");
 
 const app = express();
 
@@ -15,6 +15,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(logger("dev"));
+
+app.get("/cities", async (req, res) => {
+  let cities = await City.find({});
+  res.send(cities);
+});
 
 app.get("/locations", async (req, res) => {
   let locations = await Location.find({});
