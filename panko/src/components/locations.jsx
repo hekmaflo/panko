@@ -3,22 +3,21 @@ import axios from "axios";
 
 const Form = (props) => {
   const initialState = {
-    issueType: "",
-    subject: "",
-    message: "",
+    locationName: "",
+    locationType: "",
+    address: "",
+    description: "",
   };
 
   const [formState, setFormState] = useState(initialState);
 
-  // Event Handler: a callback function to be run when the event is observed
   const handleSubmit = async (event) => {
-    // we always need to stop the browser from submitting the form or the page will be refreshed.
     event.preventDefault();
-    // do something with the data in the component state
+
     await axios.post("http://localhost:3001/locations", formState);
-    // clear the form
+
     setFormState(initialState);
-    props.getIssues();
+    props.getLocations();
   };
 
   const handleChange = (event) => {
@@ -28,30 +27,30 @@ const Form = (props) => {
   return (
     // Event Listener: tells the browser which event to listen for on which element and what to do when the event happens
     <form onSubmit={handleSubmit}>
-      <label htmlFor="issueType">Type of Issue:</label>
+      <label htmlFor="locationType">Type of location:</label>
       <select
-        id="issueType"
+        id="locationType"
         onChange={handleChange}
-        value={formState.issueType}
+        value={formState.locationType}
       >
-        <option value="outage">Service Outage</option>
-        <option value="billing">Billing</option>
-        <option value="cancel">Cancel Service</option>
+        <option value="restaurant">Restaurant</option>
+        <option value="attraction">Attraction</option>
+        <option value="landmark">Landmark</option>
       </select>
-      <label htmlFor="subject">Subject:</label>
+      <label htmlFor="address">Address:</label>
       <input
         type="text"
-        id="subject"
+        id="address"
         onChange={handleChange}
-        value={formState.subject}
+        value={formState.address}
       />
-      <label htmlFor="message">Message</label>
+      <label htmlFor="description">Description</label>
       <textarea
-        id="message"
+        id="description"
         cols="30"
         rows="10"
         onChange={handleChange}
-        value={formState.message}
+        value={formState.description}
       ></textarea>
       <button type="submit">Send</button>
     </form>
