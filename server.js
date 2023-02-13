@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001;
 
 const db = require("./db");
 
-const { Issue } = require("./models");
+const { Location } = require("./models");
 
 const app = express();
 
@@ -16,14 +16,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(logger("dev"));
 
-app.get("/issues", async (req, res) => {
-  let issues = await Issue.find({});
-  res.send(issues);
+app.get("/locations", async (req, res) => {
+  let locations = await Location.find({});
+  res.send(locations);
 });
 
-app.post("/issues", async (req, res) => {
-  let newIssue = await Issue.create(req.body);
-  res.send(newIssue);
+app.post("/locations", async (req, res) => {
+  let newLocation = await Location.create(req.body);
+  res.send(newLocation);
 });
 
 app.listen(PORT, () => {
