@@ -26,7 +26,7 @@ const Form = (props) => {
 
   return (
     // Event Listener: tells the browser which event to listen for on which element and what to do when the event happens
-    <form onSubmit={handleSubmit}>
+    <form className="Form" onSubmit={handleSubmit}>
       <label htmlFor="LocationName">Location:</label>
       <input
         type="text"
@@ -55,7 +55,7 @@ const Form = (props) => {
       <textarea
         id="description"
         cols="30"
-        rows="10"
+        rows="3"
         onChange={handleChange}
         value={formState.description}
       ></textarea>

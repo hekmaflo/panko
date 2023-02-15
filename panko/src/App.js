@@ -33,20 +33,22 @@ function App() {
         <h3>PANKO</h3>
         <h1>What is the place you are vistiing?</h1>
       </div>
+      <Form getLocations={getLocations} />
       <header className="App-header">
-        <Form getLocations={getLocations} />
-        <h1>LOCATIONS:</h1>
-        {locations.map((location) => (
-          <div key={location._id}>
-            <h1>Location: {location.locationName}</h1>
-            <h3>Type of Location: {location.locationType}</h3>
-            <p>Address: {location.address}</p>
-            <p>Description: {location.description}</p>
-            <button onClick={() => deleteLocations(location._id)}>
-              delete
-            </button>
-          </div>
-        ))}
+        <div>
+          <h1>LOCATIONS:</h1>
+          {locations.map((location) => (
+            <div className="Location" key={location._id}>
+              <h3>Location: {location.locationName}</h3>
+              <p>Type of Location: {location.locationType}</p>
+              <p>Address: {location.address}</p>
+              <p>Description: {location.description}</p>
+              <button onClick={() => deleteLocations(location._id)}>
+                delete
+              </button>
+            </div>
+          ))}
+        </div>
       </header>
     </div>
   );
