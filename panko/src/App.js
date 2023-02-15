@@ -1,3 +1,4 @@
+import pankoLogo from "./travel.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
@@ -40,12 +41,13 @@ function App() {
     <div className="App">
       <div className="Left-div">
         <h3>PANKO</h3>
+        <img className="rotate" src={pankoLogo} alt="panko" />
         <h1>What is the place you are vistiing?</h1>
       </div>
       <Form getLocations={getLocations} />
       <header className="App-header">
         <div>
-          <h1>LOCATIONS:</h1>
+          <h3>LOCATIONS:</h3>
           <div className="Scroll-div">
             {locations.map((location) => (
               <div className="Location" key={location._id}>
@@ -55,6 +57,9 @@ function App() {
                 <p>Description: {location.description}</p>
                 <button onClick={() => deleteLocations(location._id)}>
                   delete
+                </button>
+                <button onClick={() => updateLocations(location._id)}>
+                  update
                 </button>
               </div>
             ))}

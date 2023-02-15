@@ -34,7 +34,21 @@ body {
   flex-direction: row;
 }
 
+.Form-div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 35em;
+  background-color: blue;
+  border-radius: 20px;
+  margin: 10px;
+}
+
 .Form {
+  color: aliceblue;
+  margin: 10px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -44,9 +58,10 @@ body {
 
 .Scroll-div {
   height: 35em;
+  width: 17em;
   overflow-x: hidden;
   overflow-y: auto;
-  margin: 10px;
+  margin: 7px;
   background-color: lightgreen;
 }
 
@@ -64,5 +79,18 @@ body {
   height: 15em;
   border-radius: 15px;
   line-height: 3px;
-  margin: 5px;
+  margin: 7px;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
