@@ -15,6 +15,15 @@ function App() {
     }
   };
 
+  const deleteLocations = async (id) => {
+    try {
+      let res = await axios.delete(`http://localhost:3001/locations/${id}`);
+      setLocations(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     getLocations();
   }, []);
@@ -29,6 +38,9 @@ function App() {
             <h3>Type of Location: {location.locationType}</h3>
             <p>Address: {location.address}</p>
             <p>Description: {location.description}</p>
+            <button onClick={() => deleteLocations(location._id)}>
+              delete
+            </button>
           </div>
         ))}
       </header>
