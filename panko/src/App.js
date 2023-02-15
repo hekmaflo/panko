@@ -44,10 +44,11 @@ function App() {
         <img className="rotate" src={pankoLogo} alt="panko" />
         <h1>What is the place you are vistiing?</h1>
       </div>
+
       <Form getLocations={getLocations} />
       <header className="App-header">
         <div>
-          <h3>LOCATIONS:</h3>
+          {/* <p>LOCATIONS:</p> */}
           <div className="Scroll-div">
             {locations.map((location) => (
               <div className="Location" key={location._id}>
