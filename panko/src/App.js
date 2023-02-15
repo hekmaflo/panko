@@ -29,6 +29,10 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <div className="Left-div">
+        <h3>PANKO</h3>
+        <h1>What is the place you are vistiing?</h1>
+      </div>
       <header className="App-header">
         <Form getLocations={getLocations} />
         <h1>LOCATIONS:</h1>
