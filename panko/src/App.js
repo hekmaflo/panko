@@ -24,6 +24,15 @@ function App() {
     }
   };
 
+  const updateLocations = async (id) => {
+    try {
+      let res = await axios.put(`http://localhost:3001/locations/${id}`);
+      setLocations(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     getLocations();
   }, []);
