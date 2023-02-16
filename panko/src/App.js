@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import Form from "./components/locations";
+import UpdateForm from "./components/UpdateLocations";
 
 function App() {
   const [locations, setLocations] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState(null);
 
   const getLocations = async () => {
     try {
@@ -27,8 +29,9 @@ function App() {
 
   const updateLocations = async (id) => {
     try {
-      let res = await axios.put(`http://localhost:3001/locations/${id}`);
-      setLocations(res.data);
+      let res = await axios.get(`http://localhost:3001/locations/${id}`);
+      console.log(res);
+      setSelectedLocation(res.data);
     } catch (err) {
       console.log(err);
     }
@@ -46,6 +49,10 @@ function App() {
       </div>
 
       <Form getLocations={getLocations} />
+      <UpdateForm
+        selectedLocation={selectedLocation}
+        getLocations={getLocations}
+      />
       <header className="App-header">
         <div>
           <div className="Scroll-div">

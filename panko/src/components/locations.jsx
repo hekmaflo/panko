@@ -4,7 +4,7 @@ import axios from "axios";
 const Form = (props) => {
   const initialState = {
     locationName: "",
-    locationType: "",
+    locationType: "restaurant",
     address: "",
     description: "",
   };
