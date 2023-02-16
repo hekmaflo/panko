@@ -25,11 +25,11 @@ const Form = (props) => {
   };
 
   return (
-    // Event Listener: tells the browser which event to listen for on which element and what to do when the event happens
     <div className="Form-div">
       <form className="Form" onSubmit={handleSubmit}>
         <label htmlFor="LocationName">Location:</label>
         <input
+          placeholder="your location here"
           type="text"
           id="locationName"
           onChange={handleChange}
@@ -47,6 +47,7 @@ const Form = (props) => {
         </select>
         <label htmlFor="address">Address:</label>
         <input
+          placeholder="address here"
           type="text"
           id="address"
           onChange={handleChange}
@@ -54,6 +55,7 @@ const Form = (props) => {
         />
         <label htmlFor="description">Description</label>
         <textarea
+          placeholder="short description here"
           id="description"
           cols="30"
           rows="3"

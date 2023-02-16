@@ -3,7 +3,7 @@ body {
   align-items: center;
   align-content: center;
   justify-content: center;
-  background-color: rgb(11, 17, 20);
+  background-color: rgb(21, 33, 40);
 }
 
 .App {
@@ -19,8 +19,12 @@ body {
 }
 
 .Left-div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   color: azure;
-  background-color: dimgrey;
+  background-color: rgb(24, 81, 72);
   border-radius: 15px;
   height: 40em;
   width: 40em;
@@ -57,15 +61,22 @@ body {
   flex-direction: column;
 }
 
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 .Scroll-div {
   height: 35em;
   width: 17em;
   overflow-x: hidden;
   overflow-y: auto;
   margin: 7px;
-  background-color: rgb(66, 128, 44);
-  border-style: solid;
-  border-color: darkorange;
+  background-color: rgb(206, 206, 206);
+  /* border-style: solid;
+  border-color: rgba(0, 0, 0, 0.631); */
   border-radius: 10px;
 }
 
