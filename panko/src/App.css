@@ -187,6 +187,10 @@ input {
   margin-bottom: 16px;
 }
 
+.key {
+  font-weight: bold;
+}
+
 .btn-div {
   display: flex;
   margin-left: auto;

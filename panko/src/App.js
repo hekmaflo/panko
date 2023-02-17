@@ -112,7 +112,6 @@ function App() {
       <header className="App-header">
         <div>
           <div className="Scroll-div">
-            <p className="no-locations-msg">No locatons have been added.</p>
             {locations.map((location) => (
               <div className="Location" key={location._id}>
                 <div className="btn-div">
@@ -124,11 +123,11 @@ function App() {
                   </button>
                 </div>
                 <h3>Location: {location.locationName}</h3>
-                <p>Type:</p>
+                <p className="key">Type:</p>
                 <p>{location.locationType}</p>
-                <p>Address:</p>
+                <p className="key">Address:</p>
                 <p> {location.address}</p>
-                <p>Description:</p>
+                <p className="key">Description:</p>
                 <p>{location.description}</p>
 
                 <button
@@ -139,6 +138,7 @@ function App() {
                 </button>
               </div>
             ))}
+            <p className="no-locations-msg">No locations have been added.</p>
           </div>
         </div>
       </header>
