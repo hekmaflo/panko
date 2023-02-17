@@ -15,6 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(logger("dev"));
+app.use(express.static(`${__dirname}/client/build`));
 
 app.get("/cities", async (req, res) => {
   let cities = await City.find({});
@@ -68,6 +69,10 @@ app.put("/locations/:id", async (req, res) => {
   );
   let locations = await Location.find({});
   res.send(locations);
+});
+
+app.get("/*", (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`);
 });
 
 app.listen(PORT, () => {
