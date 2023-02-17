@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import EditImg from "./edit.png";
 
 const UpdateForm = (props) => {
   const initialState = {
@@ -44,6 +45,7 @@ const UpdateForm = (props) => {
   return (
     <div className="Form-div2">
       {/* <h2>{props.locationName}</h2> */}
+      <img className="icon" src={EditImg} alt="edit" />
       <form className="Form" onSubmit={handleSubmit}>
         <label htmlFor="LocationName">Location:</label>
         <input
@@ -53,7 +55,7 @@ const UpdateForm = (props) => {
           onChange={handleChange}
           value={formState.locationName}
         />
-        <label htmlFor="locationType">Type of location:</label>
+        <label htmlFor="locationType">Type:</label>
         <select
           id="locationType"
           onChange={handleChange}
@@ -80,7 +82,9 @@ const UpdateForm = (props) => {
           onChange={handleChange}
           value={formState.description}
         ></textarea>
-        <button type="submit">Send</button>
+        <button className="form-btn" type="submit">
+          Update
+        </button>
       </form>
     </div>
   );

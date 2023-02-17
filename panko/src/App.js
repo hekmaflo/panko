@@ -1,4 +1,5 @@
 import pankoLogo from "./travel.png";
+import crossIcon from "./cross.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
@@ -72,18 +73,27 @@ function App() {
       <header className="App-header">
         <div>
           <div className="Scroll-div">
-            <p>Locations are here.</p>
+            <p className="no-locations-msg">No locatons have been added.</p>
             {locations.map((location) => (
               <div className="Location" key={location._id}>
+                <div className="btn-div">
+                  <button
+                    className="delete-btn"
+                    onClick={() => deleteLocations(location._id)}
+                  >
+                    <img className="cross" src={crossIcon} alt="cross" />
+                  </button>
+                </div>
                 <h3>Location: {location.locationName}</h3>
                 <p>Type of Location: {location.locationType}</p>
                 <p>Address: {location.address}</p>
                 <p>Description: {location.description}</p>
-                <button onClick={() => deleteLocations(location._id)}>
-                  delete
-                </button>
-                <button onClick={() => updateLocations(location._id)}>
-                  update
+
+                <button
+                  className="edit-btn"
+                  onClick={() => updateLocations(location._id)}
+                >
+                  EDIT
                 </button>
               </div>
             ))}

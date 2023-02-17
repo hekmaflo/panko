@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import LocationImg from "./location.png";
 
-const Form = (props) => {
+const Destination = (props) => {
   const initialState = {
     locationName: "",
     locationType: "restaurant",
@@ -38,33 +38,7 @@ const Form = (props) => {
           onChange={handleChange}
           value={formState.locationName}
         />
-        <label htmlFor="locationType">Type:</label>
-        <select
-          id="locationType"
-          onChange={handleChange}
-          value={formState.locationType}
-        >
-          <option value="restaurant">Restaurant</option>
-          <option value="attraction">Attraction</option>
-          <option value="landmark">Landmark</option>
-        </select>
-        <label htmlFor="address">Address:</label>
-        <input
-          placeholder="address here"
-          type="text"
-          id="address"
-          onChange={handleChange}
-          value={formState.address}
-        />
-        <label htmlFor="description">Description</label>
-        <textarea
-          placeholder="short description here"
-          id="description"
-          cols="30"
-          rows="3"
-          onChange={handleChange}
-          value={formState.description}
-        ></textarea>
+
         <button className="form-btn" type="submit">
           Submit
         </button>
@@ -72,4 +46,4 @@ const Form = (props) => {
     </div>
   );
 };
-export default Form;
+export default Destination;
