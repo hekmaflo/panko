@@ -23,7 +23,7 @@ const Destination = (props) => {
 
   return (
     <div>
-      <form className="Form" onSubmit={handleSubmit}>
+      <form className="Form-destination" onSubmit={handleSubmit}>
         <label htmlFor="cityName"></label>
         <input
           placeholder="Whats your destination?"
@@ -31,9 +31,12 @@ const Destination = (props) => {
           id="cityName"
           onChange={handleChange}
           value={formState.cityName}
+          className="destination-form"
         />
 
-        <button type="submit">Submit</button>
+        <button className="form-btn-destination " type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

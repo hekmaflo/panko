@@ -11,6 +11,7 @@ function App() {
   const [locations, setLocations] = useState([]);
   const [destinations, setDestinations] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedCity, setSelectedCity] = useState(null);
 
   const getLocations = async () => {
     try {
@@ -50,6 +51,17 @@ function App() {
     }
   };
 
+  const updateCities = async (id) => {
+    try {
+      let res = await axios.get(`http://localhost:3001/cities/${id}`);
+      console.log(res);
+      setSelectedCity(res.data);
+      handleToggleOn();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const [edit, toggleEdit] = useState(false);
 
   const handleToggleOn = () => toggleEdit(true);
@@ -73,7 +85,7 @@ function App() {
         <h2 className="Motto2">PANKO</h2>
         {destinations.map((destination) => (
           <div>
-            <h3>{destination.cityName}</h3>
+            <h3 className="destination">{destination.cityName}</h3>
           </div>
         ))}
         <Destination getDestinations={getDestinations} />
