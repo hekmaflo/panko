@@ -70,6 +70,7 @@ function App() {
           Life is a journey, leave a trail with <strike>breadcrumbs</strike>
         </h2>
         <h2 className="Motto2">PANKO</h2>
+        <Destination />
       </div>
       {edit ? (
         <UpdateForm
