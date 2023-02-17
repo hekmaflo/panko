@@ -32,7 +32,7 @@ function App() {
       let res = await axios.get(`http://localhost:3001/locations/${id}`);
       console.log(res);
       setSelectedLocation(res.data);
-      toggleEdit(true);
+      handleToggleOn();
     } catch (err) {
       console.log(err);
     }
@@ -40,9 +40,9 @@ function App() {
 
   const [edit, toggleEdit] = useState(false);
 
-  // const handleLoginClick = () => toggleEdit(true);
+  const handleToggleOn = () => toggleEdit(true);
 
-  // const handleLogoutClick = () => toggleEdit(false);
+  const handleToggleOff = () => toggleEdit(false);
 
   useEffect(() => {
     getLocations();
@@ -54,12 +54,16 @@ function App() {
         <img className="rotate" src={pankoLogo} alt="panko" />
         <h1>What City are you visting?</h1>
       </div>
+      {edit ? (
+        <UpdateForm
+          selectedLocation={selectedLocation}
+          getLocations={getLocations}
+          handleToggleOff={handleToggleOff}
+        />
+      ) : (
+        <Form getLocations={getLocations} handleToggleOff={handleToggleOff} />
+      )}
 
-      <Form getLocations={getLocations} />
-      <UpdateForm
-        selectedLocation={selectedLocation}
-        getLocations={getLocations}
-      />
       <header className="App-header">
         <div>
           <div className="Scroll-div">

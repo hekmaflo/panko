@@ -28,6 +28,7 @@ const UpdateForm = (props) => {
 
     setFormState(initialState);
     props.getLocations();
+    props.handleToggleOff();
   };
 
   const handleChange = (event) => {
