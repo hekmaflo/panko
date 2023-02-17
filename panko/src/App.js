@@ -56,7 +56,6 @@ function App() {
       let res = await axios.get(`http://localhost:3001/cities/${id}`);
       console.log(res);
       setSelectedCity(res.data);
-      handleToggleOn();
     } catch (err) {
       console.log(err);
     }
