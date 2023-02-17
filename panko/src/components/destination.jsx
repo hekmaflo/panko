@@ -14,7 +14,7 @@ const Destination = (props) => {
     await axios.post("http://localhost:3001/cities", formState);
 
     setFormState(initialState);
-    props.getLocations();
+    props.getDestinations();
   };
 
   const handleChange = (event) => {

@@ -70,7 +70,10 @@ function App() {
           Life is a journey, leave a trail with <strike>breadcrumbs</strike>
         </h2>
         <h2 className="Motto2">PANKO</h2>
-        <Destination />
+        {destinations.map((destination) => (
+          <h3>{destination.cityName}</h3>
+        ))}
+        <Destination getDestinations={getDestinations} />
       </div>
       {edit ? (
         <UpdateForm
