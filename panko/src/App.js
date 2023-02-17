@@ -32,10 +32,17 @@ function App() {
       let res = await axios.get(`http://localhost:3001/locations/${id}`);
       console.log(res);
       setSelectedLocation(res.data);
+      toggleEdit(true);
     } catch (err) {
       console.log(err);
     }
   };
+
+  const [edit, toggleEdit] = useState(false);
+
+  // const handleLoginClick = () => toggleEdit(true);
+
+  // const handleLogoutClick = () => toggleEdit(false);
 
   useEffect(() => {
     getLocations();

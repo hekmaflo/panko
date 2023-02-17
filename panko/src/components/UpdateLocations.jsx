@@ -9,12 +9,12 @@ const UpdateForm = (props) => {
     description: "",
   };
 
-  const oldState = {
-    locationName: props.locationName,
-    locationType: props.locationtype,
-    address: props.address,
-    description: props.description,
-  };
+  //   const oldState = {
+  //     locationName: props.locationName,
+  //     locationType: props.locationtype,
+  //     address: props.address,
+  //     description: props.description,
+  //   };
 
   const [formState, setFormState] = useState(initialState);
 
@@ -34,14 +34,15 @@ const UpdateForm = (props) => {
     setFormState({ ...formState, [event.target.id]: event.target.value });
   };
 
-  const setPriorState = () => {
-    console.log(oldState);
-  };
+  //   const setPriorState = () => {
+  //     console.log(oldState);
+  //   };
 
-  setPriorState();
+  //   setPriorState();
 
   return (
-    <div className="Form-div">
+    <div className="Form-div2">
+      {/* <h2>{props.locationName}</h2> */}
       <form className="Form" onSubmit={handleSubmit}>
         <label htmlFor="LocationName">Location:</label>
         <input
