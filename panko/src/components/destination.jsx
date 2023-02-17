@@ -1,13 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
-import LocationImg from "./location.png";
 
 const Destination = (props) => {
   const initialState = {
-    locationName: "",
-    locationType: "restaurant",
-    address: "",
-    description: "",
+    cityName: "",
   };
 
   const [formState, setFormState] = useState(initialState);
@@ -15,11 +11,10 @@ const Destination = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.post("http://localhost:3001/locations", formState);
+    await axios.post("http://localhost:3001/cities", formState);
 
     setFormState(initialState);
     props.getLocations();
-    props.handleToggleOff();
   };
 
   const handleChange = (event) => {
@@ -28,15 +23,14 @@ const Destination = (props) => {
 
   return (
     <div className="Form-div">
-      <img className="icon" src={LocationImg} alt="location" />
       <form className="Form" onSubmit={handleSubmit}>
-        <label htmlFor="LocationName">Location:</label>
+        <label htmlFor="cityName">Location:</label>
         <input
           placeholder="your location here"
           type="text"
-          id="locationName"
+          id="cityName"
           onChange={handleChange}
-          value={formState.locationName}
+          value={formState.cityName}
         />
 
         <button className="form-btn" type="submit">
