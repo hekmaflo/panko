@@ -11,7 +11,10 @@ const Destination = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.post("http://localhost:3001/cities", formState);
+    await axios.put(
+      `http://localhost:3001/cities/${props.selectedCity._id}`,
+      formState
+    );
 
     setFormState(initialState);
     props.getDestinations();

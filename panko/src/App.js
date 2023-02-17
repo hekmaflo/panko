@@ -85,9 +85,19 @@ function App() {
         {destinations.map((destination) => (
           <div>
             <h3 className="destination">{destination.cityName}</h3>
+            <button
+              className="edit-btn"
+              onClick={() => updateCities(destination._id)}
+            >
+              EDIT
+            </button>
           </div>
         ))}
-        <Destination getDestinations={getDestinations} />
+        <Destination
+          getDestinations={getDestinations}
+          updateCities={updateCities}
+          selectedCity={selectedCity}
+        />
       </div>
       {edit ? (
         <UpdateForm
