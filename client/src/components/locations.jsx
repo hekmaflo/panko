@@ -15,7 +15,7 @@ const Form = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.post("http://localhost:3001/locations", formState);
+    await axios.post("/locations", formState);
 
     setFormState(initialState);
     props.getLocations();

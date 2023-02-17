@@ -15,7 +15,7 @@ function App() {
 
   const getLocations = async () => {
     try {
-      let res = await axios.get("http://localhost:3001/locations");
+      let res = await axios.get("/locations");
       setLocations(res.data);
     } catch (err) {
       console.log(err);
@@ -24,7 +24,7 @@ function App() {
 
   const getDestinations = async () => {
     try {
-      let res = await axios.get("http://localhost:3001/cities");
+      let res = await axios.get("/cities");
       setDestinations(res.data);
     } catch (err) {
       console.log(err);
@@ -33,7 +33,7 @@ function App() {
 
   const deleteLocations = async (id) => {
     try {
-      let res = await axios.delete(`http://localhost:3001/locations/${id}`);
+      let res = await axios.delete(`/locations/${id}`);
       setLocations(res.data);
     } catch (err) {
       console.log(err);
@@ -42,7 +42,7 @@ function App() {
 
   const updateLocations = async (id) => {
     try {
-      let res = await axios.get(`http://localhost:3001/locations/${id}`);
+      let res = await axios.get(`/locations/${id}`);
       console.log(res);
       setSelectedLocation(res.data);
       handleToggleOn();
@@ -53,7 +53,7 @@ function App() {
 
   const updateCities = async (id) => {
     try {
-      let res = await axios.get(`http://localhost:3001/cities/${id}`);
+      let res = await axios.get(`/cities/${id}`);
       console.log(res);
       setSelectedCity(res.data);
     } catch (err) {

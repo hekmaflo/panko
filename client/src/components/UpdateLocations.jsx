@@ -22,10 +22,7 @@ const UpdateForm = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.put(
-      `http://localhost:3001/locations/${props.selectedLocation._id}`,
-      formState
-    );
+    await axios.put(`/locations/${props.selectedLocation._id}`, formState);
 
     setFormState(initialState);
     props.getLocations();
