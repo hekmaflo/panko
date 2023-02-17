@@ -58,6 +58,7 @@ function App() {
 
   useEffect(() => {
     getLocations();
+    getDestinations();
   }, []);
   return (
     <div className="App">
@@ -71,7 +72,9 @@ function App() {
         </h2>
         <h2 className="Motto2">PANKO</h2>
         {destinations.map((destination) => (
-          <h3>{destination.cityName}</h3>
+          <div>
+            <h3>{destination.cityName}</h3>
+          </div>
         ))}
         <Destination getDestinations={getDestinations} />
       </div>
