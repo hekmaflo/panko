@@ -5,15 +5,26 @@ import axios from "axios";
 import "./App.css";
 import Form from "./components/locations";
 import UpdateForm from "./components/UpdateLocations";
+import Destination from "./components/destination";
 
 function App() {
   const [locations, setLocations] = useState([]);
+  const [destinations, setDestinations] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState(null);
 
   const getLocations = async () => {
     try {
       let res = await axios.get("http://localhost:3001/locations");
       setLocations(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getDestinations = async () => {
+    try {
+      let res = await axios.get("http://localhost:3001/cities");
+      setDestinations(res.data);
     } catch (err) {
       console.log(err);
     }
