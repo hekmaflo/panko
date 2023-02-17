@@ -5,7 +5,7 @@ import LocationImg from "./location.png";
 const Form = (props) => {
   const initialState = {
     locationName: "",
-    locationType: "restaurant",
+    locationType: "Restaurant",
     address: "",
     description: "",
   };
@@ -32,7 +32,7 @@ const Form = (props) => {
       <form className="Form" onSubmit={handleSubmit}>
         <label htmlFor="LocationName">Location:</label>
         <input
-          placeholder="your location here"
+          placeholder="Location here"
           type="text"
           id="locationName"
           onChange={handleChange}
@@ -44,13 +44,13 @@ const Form = (props) => {
           onChange={handleChange}
           value={formState.locationType}
         >
-          <option value="restaurant">Restaurant</option>
-          <option value="attraction">Attraction</option>
-          <option value="landmark">Landmark</option>
+          <option value="Restaurant">Restaurant</option>
+          <option value="Attraction">Attraction</option>
+          <option value="Landmark">Landmark</option>
         </select>
         <label htmlFor="address">Address:</label>
         <input
-          placeholder="address here"
+          placeholder="Address here"
           type="text"
           id="address"
           onChange={handleChange}
@@ -58,7 +58,7 @@ const Form = (props) => {
         />
         <label htmlFor="description">Description</label>
         <textarea
-          placeholder="short description here"
+          placeholder="Description here"
           id="description"
           cols="30"
           rows="3"

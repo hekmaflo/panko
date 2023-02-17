@@ -5,7 +5,7 @@ import EditImg from "./edit.png";
 const UpdateForm = (props) => {
   const initialState = {
     locationName: "",
-    locationType: "restaurant",
+    locationType: "Restaurant",
     address: "",
     description: "",
   };
@@ -61,9 +61,9 @@ const UpdateForm = (props) => {
           onChange={handleChange}
           value={formState.locationType}
         >
-          <option value="restaurant">Restaurant</option>
-          <option value="attraction">Attraction</option>
-          <option value="landmark">Landmark</option>
+          <option value="Restaurant">Restaurant</option>
+          <option value="Attraction">Attraction</option>
+          <option value="Landmark">Landmark</option>
         </select>
         <label htmlFor="address">Address:</label>
         <input

@@ -124,9 +124,12 @@ function App() {
                   </button>
                 </div>
                 <h3>Location: {location.locationName}</h3>
-                <p>Type of Location: {location.locationType}</p>
-                <p>Address: {location.address}</p>
-                <p>Description: {location.description}</p>
+                <p>Type:</p>
+                <p>{location.locationType}</p>
+                <p>Address:</p>
+                <p> {location.address}</p>
+                <p>Description:</p>
+                <p>{location.description}</p>
 
                 <button
                   className="edit-btn"
