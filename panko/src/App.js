@@ -50,9 +50,14 @@ function App() {
   return (
     <div className="App">
       <div className="Left-div">
-        <h3>PANKO</h3>
-        <img className="rotate" src={pankoLogo} alt="panko" />
-        <h1>What City are you visting?</h1>
+        <div className="logo-title">
+          <h3>PANKO</h3>
+          <img className="rotate" src={pankoLogo} alt="panko" />
+        </div>
+        <h2 className="Motto">
+          Life is a journey, leave a trail with <strike>breadcrumbs</strike>
+        </h2>
+        <h2 className="Motto2">PANKO</h2>
       </div>
       {edit ? (
         <UpdateForm

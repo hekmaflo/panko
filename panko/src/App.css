@@ -20,10 +20,10 @@ body {
 }
 
 .Left-div {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center;
+  align-content: center; */
+  /* justify-content: center; */
   color: azure;
   background-image: url("./japan.jpeg");
   background-repeat: no-repeat;
@@ -33,6 +33,23 @@ body {
   border-radius: 15px 0px 0px 15px;
   height: 45em;
   width: 40em;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  /* justify-content: center; */
+  margin-left: 45px;
+}
+
+.Motto {
+  text-align: center;
+  margin-top: 250px;
+}
+
+.Motto2 {
+  text-align: center;
 }
 
 .App-header {
@@ -121,6 +138,7 @@ input {
 
 .rotate {
   animation: rotation 8s infinite linear;
+  width: 100px;
 }
 
 @keyframes rotation {
