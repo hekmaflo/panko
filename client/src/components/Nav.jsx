@@ -1,11 +1,16 @@
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 const Nav = () => {
   return (
-    <nav className="navbar">
-      <h4>Panko</h4>
+    <nav className="Navbar">
       <div>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About Us</NavLink>
+        <NavLink className="Navlink" to="/">
+          HOME
+        </NavLink>
+        <Link className="Navlink" to="/about">
+          ABOUT
+        </Link>
       </div>
     </nav>
   );

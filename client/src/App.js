@@ -1,11 +1,14 @@
+import { Routes, Route } from "react-router-dom";
 import pankoLogo from "./travel.png";
 import crossIcon from "./cross.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import Nav from "./components/Nav";
 import Form from "./components/locations";
 import UpdateForm from "./components/UpdateLocations";
 import Destination from "./components/destination";
+import About from "./components/about";
 
 function App() {
   const [locations, setLocations] = useState([]);
@@ -74,6 +77,10 @@ function App() {
   return (
     <div className="App">
       <div className="Left-div">
+        <Nav />
+        <Routes>
+          <Route path="about" element={<About />} />
+        </Routes>
         <div className="logo-title">
           <h3>PANKO</h3>
           <img className="rotate" src={pankoLogo} alt="panko" />

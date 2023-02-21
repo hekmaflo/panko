@@ -21,11 +21,23 @@ body {
   box-shadow: 8px 8px #000000;
 }
 
+.Navbar {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  color: aliceblue;
+  width: 100%;
+  height: 6%;
+  background-color: rgba(0, 0, 0, 0.443);
+}
+
+.Navlink {
+  color: aliceblue;
+  margin: 25px;
+  text-decoration: none;
+}
+
 .Left-div {
-  /* display: flex; */
-  /* align-items: center;
-  align-content: center; */
-  /* justify-content: center; */
   color: azure;
   background-image: url("./japan.jpeg");
   background-repeat: no-repeat;
@@ -41,14 +53,14 @@ body {
   display: flex;
   align-items: center;
   align-content: center;
-  /* justify-content: center; */
   margin-left: 45px;
+  margin-top: 20px;
 }
 
 .Motto {
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  margin-top: 140px;
+  margin-top: 80px;
 }
 
 .Motto2 {
@@ -231,6 +243,19 @@ input {
 
 .cross {
   width: 12px;
+}
+
+.About {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 12px;
+  width: 80%;
 }
 
 @keyframes rotation {
