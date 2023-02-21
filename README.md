@@ -2,7 +2,7 @@
 
 ## Created by : Hector Flores
 
-💾[Portfolio](http://www.duckduckgo.com) | 📄[LinkedIn](https://www.linkedin.com/in/hector-floresm/) |🐱[Github](https://github.com/hekmaflo) | ✅[Trello](https://trello.com/b/XoNKPQ6r/project-1)
+💾[Portfolio](http://www.duckduckgo.com) | 📄[LinkedIn](https://www.linkedin.com/in/hector-floresm/) |🐱[Github](https://github.com/hekmaflo) | ✅[Trello](https://trello.com/b/1cu7WhWs/panko)
 
 <!-- ![Image](https://i.imgur.com/EPrEq1m.jpg) -->
 <p align="center">
@@ -60,6 +60,9 @@ Panko is a travel planning application built using the MERN stack. The name "Pan
 <ul>
 <li>Ability to create users</li>
 <li> Comment section</li>
+<li>Additional Social components</li> 
+<li>User being able to get recommendations</li>
+<li>Ability to get Meta data from photos</li>
 <li> Ability to track different Destinations </li>
 <li> Able to post images of locations </li>
 </ul>
