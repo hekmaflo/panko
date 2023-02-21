@@ -43,7 +43,7 @@ Panko is a travel planning application built using the MERN stack. The name "Pan
 
 ### start here by clicking below:
 
-🟢 [PANKO](https://whac-a-mole-8bit.surge.sh/)
+🟢 [PANKO](https://panko.herokuapp.com)
 
 ---
 
